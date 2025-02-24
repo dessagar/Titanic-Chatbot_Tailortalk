@@ -21,7 +21,7 @@ if st.button("Ask"):
     if question:
    
 
-        BACKEND_URL = "grand-magic-production.up.railway.app"
+        BACKEND_URL = "https://grand-magic-production.up.railway.app"
         response = requests.get(f"{BACKEND_URL}/query/?question={question}")
         answer = response.json().get("answer", "No answer found")
         
