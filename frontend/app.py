@@ -1,19 +1,4 @@
-# import streamlit as st
-# import requests
 
-# st.title("🚢 Titanic Chatbot")
-
-# question = st.text_input("Ask me a question about the Titanic dataset!")
-
-# if st.button("Ask"):
-#     if question:
-#         response = requests.get(f"http://127.0.0.1:8000/query/?question={question}")
-#         answer = response.json().get("answer", "No answer found")
-        
-#         if "Generated histogram saved" in answer:
-#             st.image("age_histogram.png")
-#         else:
-#             st.write(f"**Answer:** {answer}")
 
 
 import matplotlib
@@ -34,7 +19,10 @@ question = st.text_input("Ask me a question about the Titanic dataset!")
 
 if st.button("Ask"):
     if question:
-        response = requests.get(f"http://127.0.0.1:8000/query/?question={question}")
+   
+
+        BACKEND_URL = "grand-magic-production.up.railway.app"
+        response = requests.get(f"{BACKEND_URL}/query/?question={question}")
         answer = response.json().get("answer", "No answer found")
         
         # Check if user asked about a histogram
