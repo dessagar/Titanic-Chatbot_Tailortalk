@@ -1,0 +1,25 @@
+/* Title Customization */
+.title {
+    color: #ff6347;
+    text-align: center;
+    font-size: 40px;
+}
+
+/* Customizing Buttons */
+div.stButton > button {
+    background-color: #ff4b4b;
+    color: white;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+/* Sidebar Background */
+[data-testid="stSidebar"] {
+    background-color: #2b2d42;
+    color: white;
+}
+
+/* Background Color */
+body {
+    background-color: #f4f4f4;
+}
